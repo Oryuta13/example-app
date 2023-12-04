@@ -17,5 +17,7 @@ class IndexController extends Controller
         // return view('tweet.index')
         //         ->with('tweets', $tweets);
         $tweets = Tweet::orderBy('created_at', 'DESC')->get();
+        return view('tweet.index')
+            ->with('tweets', $tweets);
     }
 }
