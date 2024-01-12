@@ -8,6 +8,6 @@ if (! function_exists('image_url')) {
       return (string) app()->make(\Cloudinary\Cloudinary::class)
       ->image($path)->secure();
     }
-    return asset('storage/app/public/images/' . $path);
+    return asset('storage/images/' . $path);
   }
 }
