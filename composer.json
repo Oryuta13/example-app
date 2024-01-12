@@ -2,15 +2,22 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "keywords": [
+        "laravel",
+        "framework"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.1",
+        "ext-memcached": "*",
+        "cloudinary/cloudinary_php": "^2",
         "guzzlehttp/guzzle": "^7.2",
         "laravel-lang/lang": "~10.3",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
-        "laravel/tinker": "^2.8"
+        "laravel/tinker": "^2.8",
+        "symfony/http-client": "^7.0",
+        "symfony/mailgun-mailer": "^7.0"
     },
     "require-dev": {
         "askdkc/breezejp": "^1.7",
@@ -29,7 +36,10 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
-        }
+        },
+        "files": [
+            "app/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
